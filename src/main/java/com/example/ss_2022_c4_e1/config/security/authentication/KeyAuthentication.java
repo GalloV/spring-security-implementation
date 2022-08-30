@@ -10,11 +10,10 @@ public class KeyAuthentication implements Authentication {
 
     private final String secret;
 
-    private boolean authenticated;
+    private boolean authenticated = false;
 
-    public KeyAuthentication(String secret, boolean authenticated) {
+    public KeyAuthentication(String secret) {
         this.secret = secret;
-        this.authenticated = authenticated;
     }
 
     @Override
@@ -50,7 +49,6 @@ public class KeyAuthentication implements Authentication {
     public Object getPrincipal() {
         return null;
     }
-
 
     @Override
     public String getName() {
