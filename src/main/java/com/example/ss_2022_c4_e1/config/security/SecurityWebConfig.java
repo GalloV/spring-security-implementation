@@ -15,7 +15,7 @@ public class SecurityWebConfig  {
 
         return  http.httpBasic()
                 .and()
-                .addFilterBefore(new KeyAuthenticationFilter(), BasicAuthenticationFilter.class )
+                .addFilterBefore(new KeyAuthenticationFilter(), BasicAuthenticationFilter.class)
                 .authorizeRequests().anyRequest().authenticated()
                 .and().build();
     }
